@@ -1,0 +1,40 @@
+# phpstorm files
+.idea
+codestyles
+
+# macOS files
+_mac
+
+# default yii .gitignore
+# assets/*
+# !assets/.gitignore
+# protected/runtime/*
+# !protected/runtime/.gitignore
+# protected/data/*.db
+# themes/classic/views/
+
+# db config
+config/db.php
+# vendors
+vendor
+# composer
+composer.phar
+
+# uploads
+web/uploads/*
+
+# Codeception
+codecept.phar
+codeception.yml
+codeception.*
+
+# apache logs
+error.log
+custom.log
+
+# distributable
+dist/*
+
+# libraries
+node_modules
+node_modules/*

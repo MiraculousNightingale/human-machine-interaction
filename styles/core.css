@@ -1,0 +1,42 @@
+body {
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+.task-block {
+    text-align: center;
+    display: block;
+    /*border: 1px solid black;*/
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+.task-block h1 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+button {
+    display: block;
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin: 10px auto;
+    padding: 10px 30px;
+    font-weight: 600;
+    background: cornflowerblue;
+    border-radius: 20px;
+    transition: .35s;
+    width: 400px;
+}
+
+button:hover {
+    background: #8eabff;
+    color: black;
+    transition: .35s;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px 20px;
+}

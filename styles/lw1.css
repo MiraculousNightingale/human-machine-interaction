@@ -1,0 +1,15 @@
+#task5-output {
+    display: block;
+    margin: 10px auto;
+    height: 50px;
+    width: 500px;
+    overflow: scroll;
+}
+
+#task6-output {
+    display: block;
+    margin: 10px auto;
+    height: 100px;
+    width: 500px;
+    overflow: scroll;
+}

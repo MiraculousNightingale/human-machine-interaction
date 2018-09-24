@@ -14,6 +14,7 @@ Setup
 
 Additional:
 -
+- Compiler used in the project — https://babeljs.io/
 - https://www.npmjs.com/get-npm
 - use npm scripts to compile JS — `npm run scriptname`
 

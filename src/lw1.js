@@ -30,6 +30,7 @@ function taskDuo(target = parseInt(document.getElementById('task2-input').value)
             numbers.push(parseInt(strVal.charAt(i)));
         }
         if (numbers.reduce((a, b) => a + b, 0) === target) {
+            console.log(value);
             _count++;
         }
     });
@@ -119,7 +120,7 @@ function taskPenta() {
 }
 
 // Task 6 Switch first and last column(2) and shift the columns(1)
-function taskSex(shift = 2, _rows = 1, _columns = 10) {
+function taskSex(beginCol = parseInt(document.getElementById('task6-input').value), shift = parseInt(document.getElementById('task6-input2').value), _rows = parseInt(document.getElementById('task6-rows').value), _columns = 10) {
 
     let _array = [],
         _output = document.getElementById('task6-output');
@@ -133,27 +134,48 @@ function taskSex(shift = 2, _rows = 1, _columns = 10) {
         _array.push(_subArray);
     }
     _output.innerHTML += 'Before: <br>';
-    _array.forEach(value => value.forEach(value2 => _output.innerHTML += value2 + ' '));
+    _array.forEach(value => {
+        value.forEach(value2 => _output.innerHTML += value2 + ' ');
+        _output.innerHTML += '<br>';
+    });
 
+    // Here we SHIFT
     let _shifted = [];
     for (let i = 0; i < _rows; i++) {
-        let _subShifted = Array(_columns);
-        for (let z = 0; z < _columns; z++) {
-            let getId = (z - shift < 0) ? (_columns - Math.abs((z - shift))) : (z - shift);
-            _subShifted[z] = _array[i][getId];
+        let _subShifted = Array(beginCol);
+        for (let z = 0; z < beginCol; z++) {
+            _subShifted[z] = _array[i][z];
         }
+
+        let _cut = Array(_columns - beginCol),
+            _arrayCut = [];
+        for (let z = beginCol; z < _columns; z++) {
+            _arrayCut.push(_array[i][z]);
+        }
+        for (let z = 0; z < _cut.length; z++) {
+            let getId = (z - shift < 0) ? (_cut.length - Math.abs((z - shift))) : (z - shift);
+            _cut[z] = _arrayCut[getId];
+        }
+        _subShifted = _subShifted.concat(_cut);
         _shifted.push(_subShifted);
     }
     _output.innerHTML += '<br>Shift:<br>';
-    _shifted.forEach(value => value.forEach(value2 => _output.innerHTML += value2 + ' '));
+    _shifted.forEach(value => {
+        value.forEach(value2 => _output.innerHTML += value2 + ' ');
+        _output.innerHTML += '<br>';
+    });
 
+    //Here we SWAP
     for (let i = 0; i < _rows; i++) {
-        let temp = _shifted[i][0];
-        _shifted[i][0] = _shifted[i][_columns - 1];
+        let temp = _shifted[i][beginCol];
+        _shifted[i][beginCol] = _shifted[i][_columns - 1];
         _shifted[i][_columns - 1] = temp;
     }
     _output.innerHTML += '<br>Swap:<br>';
-    _shifted.forEach(value => value.forEach(value2 => _output.innerHTML += value2 + ' '));
+    _shifted.forEach(value => {
+        value.forEach(value2 => _output.innerHTML += value2 + ' ');
+        _output.innerHTML += '<br>';
+    });
 
 }
 

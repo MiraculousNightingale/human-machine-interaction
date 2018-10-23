@@ -71,6 +71,5 @@
 </body>
 
 
-<script src="dist/core.js" type="text/javascript"></script>
 <!-- JS file-names are the same as php file-names. Set up dynamically -->
 <script src="src/<?= basename(__FILE__, '.php') ?>.js" type="text/javascript"></script>

@@ -1,0 +1,91 @@
+.invisible {
+    display: none;
+}
+
+.main-block {
+    text-align: center;
+}
+
+.add-block {
+    display: block;
+    margin: 10px auto;
+}
+
+.add-block > h6 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.add-block button, .filter-block button{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border: 1px solid black;
+    transition: .35s;
+}
+
+.add-block button:hover, .filter-block button:hover{
+    background: black;
+    color: white;
+    transition: .35s;
+}
+
+.add-block input, .filter-block input, .filter-block select{
+    font-size: 14px;
+}
+
+.view-block {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+th, tr, td{
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.filter-block{
+    display: block;
+    margin: 10px auto;
+}
+.filter-block > div{
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn-row button{
+    display: inline-block;
+    margin: 5px;
+}
+
+.checkbox-block > p{
+    margin: 2px;
+}
+
+.add-form > div{
+    display: block;
+}
+
+.data-section{
+    display: flex;
+    margin: 10px auto;
+    padding: 20px 0;
+    border-bottom: 1px solid gainsboro;
+}
+.data-section > div{
+    display: inline-block;
+    margin: 5px 30px;
+}
+
+.data-block > div{
+    margin: 0 20px 10px;
+}
+
+.data-form > div{
+    display: block;
+}
+
+.data-form > button{
+    margin: 10px 5px;
+}

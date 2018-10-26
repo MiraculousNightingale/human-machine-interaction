@@ -54,9 +54,15 @@
 </div>
 
 <div class="task-block">
-    <h1>El Tasko Sex</h1>
+    <h1>El Tasko 'koroche shestoe'</h1>
     <span>Починаючи з k-го стовпця, зрушити їх вперед, а перші k поставити на місце останніх.</span>
     <div>
+        <h6>Кількість рядків</h6>
+        <input id="task6-rows" type="number">
+        <h6>Той самий k-ий стовпець</h6>
+        <input id="task6-input" type="number">
+        <h6>На скільки вперед</h6>
+        <input id="task6-input2" type="number">
         <div id="task6-output"></div>
     </div>
     <button class="task-exec-btn" onclick="taskSex()">CHEEKI BREEKI_6_DLC_2</button>
@@ -65,6 +71,5 @@
 </body>
 
 
-<script src="dist/core.js" type="text/javascript"></script>
 <!-- JS file-names are the same as php file-names. Set up dynamically -->
-<script src="dist/<?= basename(__FILE__, '.php') ?>.js" type="text/javascript"></script>
+<script src="src/<?= basename(__FILE__, '.php') ?>.js" type="text/javascript"></script>

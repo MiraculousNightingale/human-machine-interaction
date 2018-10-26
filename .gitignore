@@ -38,3 +38,9 @@ dist/*
 # libraries
 node_modules
 node_modules/*
+
+# docs
+reports/~*.docx
+reports/~*.doc
+
+kkr.php

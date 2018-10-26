@@ -1,11 +1,19 @@
 {
-  "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.1",
-    "@babel/preset-env": "^7.0.0"
-  },
-  "scripts": {
-    "build": "babel src -d dist --presets=@babel/env",
-    "watch": "babel src --watch -d dist --presets=@babel/env"
-  }
+ "name": "php-nw-demo",
+ "version": "0.0.1",
+ "main": "index.html",
+ "single-instance": false,
+ "window": {
+  "show": true,
+  "width": 800,
+  "height": 800,
+  "title": "Mini Code Editor",
+  "toolbar": true,
+  "frame": true
+ },
+ "dependencies": {
+  "express": "^4.16.4",
+  "php-express": "0.0.3",
+  "phpnode": "^1.1.9"
+ }
 }
